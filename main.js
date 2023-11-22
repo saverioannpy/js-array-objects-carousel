@@ -44,7 +44,7 @@ function shiftArrayElementIdNext(articleArray, iterationNumber){
         }
         articleArray.pop();
     }else{ //se iterationNumber è superiore a 0 vorrà dire che l'utente ha cliccato su una minuatura del thumbs
-        while( iterationNumber > 0 ){ //iterationNumber è l'id della thumbs cliccata e il ciclo si ripeterà fin quando quest'ultima non sarà in cima ed attiva
+        while( iterationNumber > 0 ){ //iterationNumber è l'id della minuatura thumbs cliccata e il ciclo si ripeterà fin quando quest'ultima non sarà in cima ed attiva
             articleArray.push(articleArray[0]); 
             for( let i = 1; i <= articleArray.length-1 ; i++ ){ //riordino il mio array
                 articleArray[i-1] = articleArray[i];
@@ -129,7 +129,7 @@ const articleArray = [
 
 /** Main JS **/
 
-let thumbsId = 0; //questa variabile globale serve alla funzione "shiftArrayElementNext" per poter capire quante volte riordinare l'array, questa variazione avviene solo quando questa funzione è richiamata da addEventOnThumbs
+let thumbsId = 0; //questa variabile globale serve alla funzione "shiftArrayElementNext" per poter capire quante volte riordinare l'array, questa variazione avviene solo quando questa funzione è richiamata da "addEventOnThumbs"
 popolaMain();
 popoloThumb(articleArray);
 const nextBtn = document.querySelector(".btn-span-up");  //Seleziono il tasto next;
